@@ -6,7 +6,7 @@ You can see my solutions on [michael-h.dk](https://michael-h.dk)
 
 Her er my solotions to the Projects
 
-* [x] Day  1 - Javascript Drumkit - made 2018-09-18
+* [x] Day  1 - Javascript Drumkit - made 2018-09-19
 * [ ] Day  2 - CSS & Javascript Clock - made
 * [ ] Day  3 - Playing with CSS Variables and JS - made
 * [ ] Day  4 - Array Cardio Day 1 - made
