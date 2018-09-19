@@ -2,7 +2,7 @@
 
 ## Build 30 Vanilla Javascript Projects in 30 days
 
-You can see my solutions on [https://michael-h.dk](michael-h.dk)
+You can see my solutions on [michael-h.dk](https://michael-h.dk)
 
 Her er my solotions to the Projects
 
