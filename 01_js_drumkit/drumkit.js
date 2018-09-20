@@ -5,9 +5,15 @@
     (year === 2018) ?
         pos.innerHTML = `<i class="far fa-copyright"></i>${year}` :
         pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
-
 })();
+
 /*
+
+Find the codes for keys on the keyboard
+window.addEventListener('keydown', (e) => {
+    console.log(e.keyCode);
+});
+
 Paring the key-codes with ids
 
       65 clap
@@ -20,6 +26,7 @@ Paring the key-codes with ids
       75 tom
       76 tink
 */
+
 /* give all sounds a variable and load them */
 const clap = new Audio('./sounds/clap.wav');
 const hihat = new Audio('./sounds/hihat.wav');
@@ -30,6 +37,8 @@ const ride = new Audio('./sounds/ride.wav');
 const snare = new Audio('./sounds/snare.wav');
 const tom = new Audio('./sounds/tom.wav');
 const tink = new Audio('./sounds/tink.wav');
+
+// Play the sound and add style based on key code
 
 window.addEventListener('keydown', (e) => {
 
@@ -83,6 +92,8 @@ window.addEventListener('keydown', (e) => {
             break;
     }
 });
+
+// remove the style based on key code
 
 window.addEventListener('keyup', (e) => {
 
