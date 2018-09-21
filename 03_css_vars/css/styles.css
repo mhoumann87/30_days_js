@@ -192,6 +192,10 @@ main h2 {
   color: var(--fc);
 }
 
+main p {
+  color: var(--fc);
+}
+
 .choices {
   display: flex;
   flex-direction: row;
