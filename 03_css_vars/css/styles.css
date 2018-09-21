@@ -175,6 +175,10 @@ nav {
 
 /* Main Section*/
 
+main {
+  padding: 0 0.8rem;
+}
+
 main h2 {
   font-size: 3rem;
 }
@@ -195,12 +199,16 @@ main h2 {
 }
 
 .photo-box {
-  margin: 1.8rem auto;
+  margin: 2rem 0;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
 }
 
 .photo-box img {
   width: 100%;
   height: auto;
+ 
 }
 
 
