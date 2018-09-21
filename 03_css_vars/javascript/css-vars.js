@@ -7,5 +7,15 @@
 })();
 
 // Get the elements we need to work with
-const imageSlider = document.querySelector('.')
-const photoBox = document.querySelector('.photo-box');
+const inputSelectors = document.querySelectorAll('input');
+
+function updateValue() {
+  let suffix = this.dataset.suffix || '';
+  document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  console.log(this.value)
+}
+
+//Set eventhandler for change
+inputSelectors.forEach(input => input.addEventListener('change', updateValue));
+//Set eventhandler for mouse move so the value updates all the time
+inputSelectors.forEach(input => input.addEventListener('mousemove', updateValue));

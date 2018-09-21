@@ -8,7 +8,7 @@ Her er my solotions to the Projects
 
 * [x] Day  1 - Javascript Drumkit - made 2018-09-19
 * [x] Day  2 - CSS & Javascript Clock - made 2018-09-20
-* [ ] Day  3 - Playing with CSS Variables and JS - made
+* [x] Day  3 - Playing with CSS Variables and JS - made 2018-09-21
 * [ ] Day  4 - Array Cardio Day 1 - made
 * [ ] Day  5 - Flex Panels Image Gallery - made
 * [ ] Day  6 - Ajax Type Ahead - made
@@ -37,8 +37,8 @@ Her er my solotions to the Projects
 * [ ] Day 29 - Countdown Clock - made
 * [ ] Day 30 - Whack A Mole Game - made
 
-### ======================================================
+ ======================================================
 
 ## Read more about the project at [JavaScript30.com](https://javascript30.com/)
 
-### ======================================================
+======================================================

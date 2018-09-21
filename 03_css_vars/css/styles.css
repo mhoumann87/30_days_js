@@ -1,7 +1,15 @@
+/* Declare CSS variables to use for user changes*/
+:root {
+  --imgWidth: 50%;
+  --blur: 0px;
+  --bg: #CCFFCD;
+  --fc: #282828;
+}
+
 /* Base */
 body {
   width: 100%;
-  background-color: #CCFFCD;
+  background-color: var(--bg);
   color: #282828;
   font-size: 90%;
   font-family: 'Mukta Malar', sans-serif;
@@ -181,6 +189,7 @@ main {
 
 main h2 {
   font-size: 3rem;
+  color: var(--fc);
 }
 
 .choices {
@@ -196,17 +205,19 @@ main h2 {
 
 .choose h6 {
   font-size: 1.3rem;
+  color: var(--fc);
 }
 
 .photo-box {
   margin: 2rem 0;
  display: flex;
  justify-content: center;
- align-items: center; 
+ align-items: center;
+ filter: blur(var(--blur)); 
 }
 
 .photo-box img {
-  width: 100%;
+  width: var(--imgWidth);
   height: auto;
  
 }
