@@ -173,7 +173,6 @@ nav {
 }
 
 /* Main Section*/
-
 main {
   width: 80%;
   margin: 0 auto;
@@ -206,14 +205,97 @@ blockquote::after {
   max-width: 1000px;
 }
 
+.inventors {
+  border-top: 3px solid #fff;
+}
+
+.present {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
+table {
+  width: 100%;
+  border: 1px solid #282828;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
 
-main {
-  width: 80%;
+th {
+  background-color: #0238D9;
+  color: #E0EFFC;
+  padding: 10px;
+  border: 1px solid #E0EFFC;
+
+}
+
+td {
+  border: 1px solid #282828;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.filter {
+  background-color: #fff;
+  padding: 1rem 10px;
+}
+
+.filter h4 {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.4rem;
+}
+
+.ex-present {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.show-inv {
+  width: 100%;
+  margin: 2rem 0;
+  }
+
+.inv-errror {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 10px;
+  color: #ff0000;
+}
+
+.snippet {
+  padding: 10px;
+  background-color: lightgray; 
+}
+
+code {
+  font-family: 'Space Mono', monospace;
+}
+
+.invGrid {
+  width: 250px;
   margin: 0 auto;
 }
 
+.inventor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inventor img {
+  width: 100%;
+  height: auto;
+}
 
 
 @supports (grid-area: auto) {
@@ -230,6 +312,20 @@ main {
 
     .head-text {
       padding: 0 .5rem;
+    }
+
+    .present {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    .invGrid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
     }
     
   }
