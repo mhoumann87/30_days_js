@@ -297,6 +297,14 @@ code {
   height: auto;
 }
 
+.map {
+  padding: 2rem 10px;
+}
+
+.map h4 {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.4rem;
+  }
 
 @supports (grid-area: auto) {
 

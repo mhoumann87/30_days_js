@@ -111,5 +111,25 @@ function showInventors(event) {
     }
   }
 
-
 }
+
+// Array.prototype.map();
+
+//get the first and lastname of the inventors and show the array
+(function () {
+  const mappedInventors = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+  const divMap = document.querySelector('.showMap');
+  let mapText = 'onlyNames = [';
+
+  for (let i = 0; i < mappedInventors.length; i++) {
+    if (i !== mappedInventors.length - 1) {
+      mapText += "'" + mappedInventors[i] + "', ";
+    } else {
+      mapText += "'" + mappedInventors[i] + "'"
+    }
+  }
+
+
+  mapText += '];'
+  divMap.innerText = mapText;
+})();
