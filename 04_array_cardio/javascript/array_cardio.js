@@ -140,3 +140,32 @@ const inventorAge = inventors.reduce((total, inventor) => {
 }, 0);
 
 document.querySelector('#resTotalAge').innerText = `inventors.reduce((total, inventor) => {return total + (inventor.passed - inventor.year);}, 0) = ${inventorAge}`;
+
+// count instatces of values in a object
+(function () {
+  const transportation = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+
+  // Get the div to show the result
+  const countInstance = document.querySelector('#countInstance');
+  let transportHtml = ``;
+
+  const transportationInstances = transportation.reduce((obj, item) => {
+    if (!obj[item]) {
+      obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+  }, {});
+
+
+  let transportArray = Object.keys(transportationInstances)
+    .map(function (key) {
+      return [String(key), transportationInstances[key]];
+    });
+
+  for (i = 0; i < transportArray.length; i++) {
+    transportHtml += `<div>${transportArray[i][0]}: ${transportArray[i][1]}</div>`;
+  }
+
+  countInstance.innerHTML = transportHtml;
+})();
