@@ -9,7 +9,7 @@ Her er my solotions to the Projects
 * [x] Day  1 - Javascript Drumkit - made 2018-09-19
 * [x] Day  2 - CSS & Javascript Clock - made 2018-09-20
 * [x] Day  3 - Playing with CSS Variables and JS - made 2018-09-21
-* [ ] Day  4 - Array Cardio Day 1 - made
+* [x] Day  4 - Array Cardio Day 1 - made 2018-09-23
 * [ ] Day  5 - Flex Panels Image Gallery - made
 * [ ] Day  6 - Ajax Type Ahead - made
 * [ ] Day  7 - Array Cardio Day 2 - made
