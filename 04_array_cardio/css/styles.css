@@ -339,6 +339,22 @@ code {
     padding: 1rem;
   }
 
+  .sort {
+    padding: 2rem 10px;
+    background-color: #fff;
+  }
+
+  .sort h4 {
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 1.4rem;
+  }
+
+  .showSortedInventors {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {
@@ -363,6 +379,15 @@ code {
     }
 
     .invGrid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+    }
+
+    .showSortedInventors {
+      margin-top: 2rem
+      ;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);

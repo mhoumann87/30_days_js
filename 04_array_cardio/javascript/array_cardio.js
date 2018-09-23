@@ -168,4 +168,78 @@ document.querySelector('#resTotalAge').innerText = `inventors.reduce((total, inv
   }
 
   countInstance.innerHTML = transportHtml;
+
 })();
+
+//The sort function
+//set eventlistener on form
+
+document.getElementById('choose-sort').addEventListener('change', sortInventors);
+const showSortedInventors = document.querySelector('.showSortedInventors');
+let sortedInventors = [];
+let sortedHtml = ``;
+
+(function () {
+  sortedInventors = inventors.sort((a, b) => a.first > b.first ? 1 : -1);
+  sortedInventors.forEach(inventor => {
+    sortedHtml += `
+    <div class="inventor">
+      <img src="./images/${inventor.last.toLocaleLowerCase()}.jpg" alt="${inventor.first} ${inventor.last}" />
+      <h5>${inventor.first} ${inventor.last}</h5>
+      <p>Born ${inventor.year}, passed ${inventor.passed}</p>
+      <small>Image from <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></small>
+    </div>
+  `;
+
+    showSortedInventors.innerHTML = sortedHtml;
+  });
+
+})();
+
+
+
+
+
+function sortInventors(event) {
+
+  sortedHtml = '';
+  showSortedInventors.innerHTML = sortedHtml;
+
+  switch (event.target.value) {
+    case 'last':
+      sortedInventors = inventors.sort((a, b) => a.last > b.last ? 1 : -1);
+      break;
+    case 'year':
+      sortedInventors = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+      break;
+    case 'passed':
+      sortedInventors = inventors.sort((a, b) => a.passes > b.passed ? 1 : -1);
+      break;
+    case 'age':
+      sortedHtml = inventors.sort(function (a, b) {
+        const lastInventor = a.passed - a.year;
+        const nextInventor = b.passed - b.year;
+        return lastInventor > nextInventor ? -1 : 1;
+      });
+      break;
+    default:
+      sortedInventors = inventors.sort((a, b) => a.first > b.first ? 1 : -1);
+  }
+
+
+
+  sortedInventors.forEach(inventor => {
+    sortedHtml += `
+    <div class="inventor">
+      <img src="./images/${inventor.last.toLocaleLowerCase()}.jpg" alt="${inventor.first} ${inventor.last}" />
+      <h5>${inventor.first} ${inventor.last}</h5>
+      <p>Born ${inventor.year}, passed ${inventor.passed}</p>
+      <small>Image from <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></small>
+    </div>
+  `;
+
+    showSortedInventors.innerHTML = sortedHtml;
+  });
+
+
+}

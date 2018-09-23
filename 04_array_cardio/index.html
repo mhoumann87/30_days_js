@@ -83,7 +83,8 @@
         <div class="ex-present">
           <div class="exText">
             <h4>1. Array.prototype.filter()</h4>
-            <p>From <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN web docs</a>:</p>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+                target="_blank">MDN web docs</a>:</p>
             <blockquote>The filter() method creates a new array with all elements that pass the test implemented by the
               provided function.</blockquote>
           </div>
@@ -123,7 +124,8 @@
         <div class="ex-present">
           <div class="exText">
             <h4>2. Array.prototype.map()</h4>
-            <p>From <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN web docs</a>:</p>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+                target="_blank">MDN web docs</a>:</p>
             <blockquote>The map() method creates a new array with the results of calling a provided function on every
               element in the calling array.</blockquote>
           </div>
@@ -143,13 +145,66 @@
 
       </section>
 
+      <section class="sort">
+
+        <div class="ex-present">
+
+          <div class="ex-text">
+
+            <h4>3. Array.prototype.sort()</h4>
+
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The sort() method sorts the elements of an array in place and returns the array. The sort is
+              not necessarily stable. The default sort order is according to string Unicode code points.
+              The time and space complexity of the sort cannot be guaranteed as it is implementation dependent.
+            </blockquote>
+
+          </div>
+
+          <div class="code">
+
+            <p>Sort the inventors based on user input</p>
+
+            <div class="snippet">
+
+              <code>const totalAge = inventors.reduce((total, inventor) => { 
+                    return total + (inventor.passed - inventor.year)}, 0);</code>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sort-result">
+
+          <p>Choose how to sort inventors:</p>
+          <form id="choose-sort">
+            <label for="first">First Name: </label>
+            <input type="radio" name="sort" value="first" checked>
+            <label for="last">Last Name: </label>
+            <input type="radio" name="sort" value="last">
+            <label for="year">Birth Year: </label>
+            <input type="radio" name="sort" value="year">
+            <label for="passed">Year Passed: </label>
+            <input type="radio" name="sort" value="passed">
+            <label for="age">Age: </label>
+            <input type="radio" name="sort" value="age">
+          </form>
+
+        </div>
+
+        <div class="showSortedInventors"></div>
+
+      </section>
+
       <section class="reduce">
 
         <div class="ex-present">
 
           <div class="exText">
             <h4>4. Array.prototype.reduce()</h4>
-            <p>From <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN web docs</a>:</p>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+                target="_blank">MDN web docs</a>:</p>
             <blockquote>The reduce() method executes a reducer function (that you provide) on each member of the array
               resulting in a single output value.</blockquote>
           </div>
