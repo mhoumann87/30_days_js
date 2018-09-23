@@ -128,8 +128,15 @@ function showInventors(event) {
       mapText += "'" + mappedInventors[i] + "'"
     }
   }
-
-
   mapText += '];'
   divMap.innerText = mapText;
 })();
+
+// Array.prototype.reduce()
+//Find the age of each inventor
+
+const inventorAge = inventors.reduce((total, inventor) => {
+  return total + (inventor.passed - inventor.year);
+}, 0);
+
+document.querySelector('#resTotalAge').innerText = `inventors.reduce((total, inventor) => {return total + (inventor.passed - inventor.year);}, 0) = ${inventorAge}`;

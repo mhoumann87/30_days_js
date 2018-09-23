@@ -306,6 +306,30 @@ code {
   font-size: 1.4rem;
   }
 
+  .map-result {
+    background-color: teal;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .reduce {
+    padding: 2rem 10px;
+  }
+  .reduce h4 {
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 1.4rem;
+  }
+
+  #resTotalAge {
+    background-color: teal;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {
