@@ -11,7 +11,7 @@ Her er my solotions to the Projects
 * [x] Day  3 - Playing with CSS Variables and JS - made 2018-09-21
 * [x] Day  4 - Array Cardio Day 1 - made 2018-09-23
 * [x] Day  5 - Flex Panels Image Gallery - made 2018-09-24
-* [ ] Day  6 - Ajax Type Ahead - made
+* [x] Day  6 - Ajax Type Ahead - made 2018-09-25
 * [ ] Day  7 - Array Cardio Day 2 - made
 * [ ] Day  8 - Fun with HTML5 Canvas - made
 * [ ] Day  9 - 14 Must Know Dev Tools Tricks - made
