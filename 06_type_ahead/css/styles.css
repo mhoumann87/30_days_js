@@ -296,13 +296,6 @@ main {
   padding-bottom: 2rem;
 }
 
-.search-box {
-  width: 70%;
-  margin: 0 auto;
-  background-color: rgba(245, 245, 245, .6);
-  padding: 10px;
-}
-
 .search-div {
   padding: 0 10px;
 }
@@ -312,9 +305,21 @@ main {
   font-size: 2rem;
 }
 
+.search-box {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: rgba(245, 245, 245, .6);
+  padding: 20px;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
 input {
-  width: 97%;
-  position: relative;
   border: none;
   padding: 10px;
   font-family: 'Mukta Malar', sans-serif;
@@ -324,16 +329,16 @@ input {
 
 .search-form ul {
   list-style: none;
-  
   margin: 0;
   padding: 0;
 }
 
 .search-form ul li {
- 
-  padding: 15px;
+   padding: 15px;
   background-color: #fff;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-form ul li:nth-child(odd) {
