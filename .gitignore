@@ -103,7 +103,8 @@ typings/
 # Serverless directories
 .serverless
 
-
+# firebase config files
+**/*/firebase.config.js
 
 
 # End of https://www.gitignore.io/api/windows
