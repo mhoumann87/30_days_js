@@ -90,3 +90,25 @@ function getSome(event) {
 }
 
 
+//Array.prototype.find()
+//No view for the find() methode, my creavity is too low 
+
+const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'You are the best', id: 2039842 },
+  { text: 'Ramen is my fav food ever', id: 123523 },
+  { text: 'Nice Nice Nice!', id: 542328 }
+];
+
+const foundComment = comments.find(comment => comment.id === 123523);
+console.log(foundComment);
+
+const commentIndex = comments.findIndex(comment => comment.id === 2039842);
+console.log(commentIndex);
+
+
+const newComments = comments.splice(commentIndex, 1);
+console.table(comments);
+console.log(newComments);
+

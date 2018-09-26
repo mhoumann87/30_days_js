@@ -363,6 +363,11 @@ form div {
   font-family: 'Mukta Malar', sans-serif;
 }
 
+.some-result {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {
