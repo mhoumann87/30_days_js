@@ -320,6 +320,8 @@ code {
 .birthday {
   padding: 2rem 10px;
   background-color: #fff;
+  border-bottom: 5px solid #E0EFFC;
+  margin-bottom: 2rem;
 }
 
 .birthday blockquote {

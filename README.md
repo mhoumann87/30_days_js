@@ -12,7 +12,7 @@ Her er my solotions to the Projects
 * [x] Day  4 - Array Cardio Day 1 - made 2018-09-23
 * [x] Day  5 - Flex Panels Image Gallery - made 2018-09-24
 * [x] Day  6 - Ajax Type Ahead - made 2018-09-25
-* [ ] Day  7 - Array Cardio Day 2 - made
+* [x] Day  7 - Array Cardio Day 2 - made 2018-09-26
 * [ ] Day  8 - Fun with HTML5 Canvas - made
 * [ ] Day  9 - 14 Must Know Dev Tools Tricks - made
 * [ ] Day 10 - Hold Shift to Check Multiple Checkboxes - made
