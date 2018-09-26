@@ -359,6 +359,10 @@ form div {
   align-items: flex-end;
 }
 
+.ex-present h4 {
+  font-family: 'Mukta Malar', sans-serif;
+}
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {

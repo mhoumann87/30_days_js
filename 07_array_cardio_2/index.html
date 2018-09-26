@@ -92,7 +92,7 @@
           <button type="submit">Submit</button>
         </div>
       </form>
-      <p id="error"></p>
+      <p id="error" class="error"></p>
 
       <section class="some">
 
@@ -111,6 +111,48 @@
               <code>const answer = people.some(person => ((new Date().getFullYear()) - person.year >= inputAge);</code>
             </div>
           </div>
+        </div>
+
+        <div class="ex-present">
+          <div class="exText">
+            <h4>2. Array.prototype.every()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The every() method tests whether all elements in the array pass the test implemented by the
+              provided function.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Check to see if any in the array is over a certain age entered by the user.</p>
+            <div class="snippet">
+              <code>const answer = people.some(person => ((new Date().getFullYear()) - person.year >= inputAge);</code>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="result">
+          <form id="inputAge">
+            <div>
+              <label for="userAge">Enter an age between 0 and 99: </label>
+              <input type="number" id="ageSugestion" name="userAge" placeholder="19" min="0" max="99">
+            </div>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <p id="some-res"></p>
+        </div>
+        <p id="ageError" class="error"></p>
+
+        <div class="some-result">
+          <p class="result-some"></p>
+        </div>
+
+        <div class="some-result">
+          <p class="result-every"></p>
+        </div>
+
       </section>
 
     </section>

@@ -56,3 +56,37 @@ function addPost(event) {
   peopleInput.reset();
 }
 
+//Array.prototype.some() & every
+const inputAge = document.querySelector('#inputAge');
+const ageError = document.querySelector('#ageError');
+inputAge.addEventListener('submit', getSome);
+
+function getSome(event) {
+  event.preventDefault();
+  const suggestion = Number(document.querySelector('#ageSugestion').value);
+
+
+  //Check input
+  if (suggestion === '') {
+    ageError.innerText = 'Please enter an age.';
+  } else if (suggestion < 0 || suggestion > 99) {
+    ageError.innerText = 'Plase enter an age between 0 and 99';
+  }
+
+  const resultSome = document.querySelector('.result-some');
+
+  (people.some(person => ((new Date().getFullYear()) - person.year >= suggestion))) ?
+    resultSome.innerText = `The array containg persons over the age of ${suggestion}` :
+    resultSome.innerText = `There are no persons over the age of ${suggestion} in the array`;
+
+  const resultEvery = document.querySelector('.result-every');
+
+  (people.every(person => ((new Date()).getFullYear()) - person.year >= suggestion)) ?
+    resultEvery.innerText = `Every person in the array are over ${suggestion} years old` :
+    resultEvery.innerText = `Not all the people in the array are over the age of ${suggestion}`;
+
+  inputAge.reset();
+
+}
+
+
