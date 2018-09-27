@@ -257,3 +257,26 @@ footer a:hover {
 }
 
 /*Main Section*/
+
+main {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.canvas-box {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  margin: 2rem 0;
+}
+
+.canvas-box h5 {
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+.canvas {
+  width: 800px;
+  height: 600px;
+  background-color: #000;
+}
