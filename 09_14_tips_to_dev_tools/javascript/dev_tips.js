@@ -1,9 +1,58 @@
 const pos = document.querySelector('#copy');
 const year = new Date().getFullYear();
 (year === 2018) ?
-  pos.innerHTML = `<i class="far fa-copyright"></i>2018` :
+pos.innerHTML = `<i class="far fa-copyright"></i>2018`:
   pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
 
+//Tennis
+
+class Vec {
+  constructor(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+  };
+}
+
+class Rect {
+  constructor(width, height) {
+    this.pos = new Vec;
+    this.size = new Vec(width, height);
+  };
+}
+
+class Ball extends Rect {
+  constructor() {
+    super(10, 10);
+    this.velocity = new Vec;
+  }
+}
+
+const canvas = document.querySelector("#tennis");
+const context = canvas.getContext('2d');
+
+const ball = new Ball;
+ball.velocity.x = 10;
+ball.velocity.y = 10;
+
+let prevTime;
+
+function callback(millis) {
+  if (prevTime) {
+    update((millis - prevTime) / 1000);
+  }
+  prevTime = millis;
+  requestAnimationFrame(callback);
+}
+
+function update(dt) {
+  ball.pos.x += ball.velocity.x * dt;
+  ball.pos.y += ball.velocity.y * dt;
+
+  context.fillStyle = '#000000';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.fillStyle = '#FFFFFF';
+  context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
+}
 //14 tips
 
 //normal
@@ -68,7 +117,16 @@ console.log('---------------------------');
 
 console.log('const testArray = [{ name: "Tom", pet: "Cat" }, { name: "Sheryl", pet: "Turtle" }, { name: "Jane", pet: "Dog" }];');
 console.log('---------------------------');
-const testArray = [{ name: "Tom", pet: "Cat" }, { name: "Sheryl", pet: "Turtle" }, { name: "Jane", pet: "Dog" }];
+const testArray = [{
+  name: "Tom",
+  pet: "Cat"
+}, {
+  name: "Sheryl",
+  pet: "Turtle"
+}, {
+  name: "Jane",
+  pet: "Dog"
+}];
 
 //Normal array
 console.log('Show the array:');
@@ -84,11 +142,11 @@ console.log('---------------------------');
 //grouping together
 console.log("You can group the items in array in the console:");
 
-console.log("testArray.forEach(item =>" + "\n"
-  + "{console.groupCollapsed(item.name);" + "\n"
-  + "console.log(`This is ${item.name}`);" + "\n"
-  + "console.log(`The pet is a ${item.pet}`);" + "\n"
-  + "console.groupEnd(item.pet);});");
+console.log("testArray.forEach(item =>" + "\n" +
+  "{console.groupCollapsed(item.name);" + "\n" +
+  "console.log(`This is ${item.name}`);" + "\n" +
+  "console.log(`The pet is a ${item.pet}`);" + "\n" +
+  "console.groupEnd(item.pet);});");
 
 testArray.forEach(item => {
   console.groupCollapsed(item.name);
@@ -110,12 +168,12 @@ console.log("console.clear()");
 
 //Timing
 console.log('Test how long it takes to get fetch some data');
-console.log("console.time('fetching data');" + "\n"
-  + "fetch('https://jsonplaceholder.typicode.com/todos/1')" + "\n"
-  + ".then(data => data.json())" + "\n"
-  + ".then(data => {" + "\n"
-  + "console.timeEnd('fetching data');" + "\n"
-  + "console.log(data);});");
+console.log("console.time('fetching data');" + "\n" +
+  "fetch('https://jsonplaceholder.typicode.com/todos/1')" + "\n" +
+  ".then(data => data.json())" + "\n" +
+  ".then(data => {" + "\n" +
+  "console.timeEnd('fetching data');" + "\n" +
+  "console.log(data);});");
 
 console.time('fetching data');
 fetch('https://jsonplaceholder.typicode.com/todos/1')
