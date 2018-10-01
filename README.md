@@ -14,7 +14,7 @@ Her er my solotions to the Projects
 * [x] Day  6 - Ajax Type Ahead - made 2018-09-25
 * [x] Day  7 - Array Cardio Day 2 - made 2018-09-26
 * [x] Day  8 - Fun with HTML5 Canvas - made 2018-09-27
-* [ ] Day  9 - 14 Must Know Dev Tools Tricks - made
+* [x] Day  9 - 14 Must Know Dev Tools Tricks - made 2018-10-01
 * [ ] Day 10 - Hold Shift to Check Multiple Checkboxes - made
 * [ ] Day 11 - Custom HTML5 Video Player - made
 * [ ] Day 12 - Key Sequence Detection (KONAMI CODE) - made
