@@ -4,67 +4,8 @@ const year = new Date().getFullYear();
 pos.innerHTML = `<i class="far fa-copyright"></i>2018`:
   pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
 
-//Tennis
-
-class Vec {
-  constructor(x = 0, y = 0) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-class Rect {
-  constructor(width, height) {
-    this.pos = new Vec;
-    this.size = new Vec(width, height);
-  }
-}
-
-class Ball extends Rect {
-  constructor() {
-    super(10, 10);
-    this.velocity = new Vec;
-  }
-}
-
-const canvas = document.querySelector('#tennis');
-const context = canvas.getContext('2d');
-
-const ball = new Ball;
-ball.velocity.x = 100;
-ball.velocity.y = 100;
-
-let prevTime;
-
-function callback(millis) {
-  if (prevTime) {
-    update((millis - prevTime) / 1000);
-  }
-  prevTime = millis;
-  requestAnimationFrame(callback)
-}
-
-function update(dt) {
-  ball.pos.x += ball.velocity.x * dt;
-  ball.pos.y += ball.velocity.y * dt;
-
-  if (ball.pos.x < 0 || ball.pos.x > canvas.width - ball.size.x) {
-    ball.velocity.x = -ball.velocity.x;
-  }
-
-  if (ball.pos.y < 0 || ball.pos.y > canvas.height - ball.size.y) {
-    ball.velocity.y = -ball.velocity.y;
-  }
-
-  context.fillStyle = '#000000';
-  context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = '#FFFFFF';
-  context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
-}
-
-callback();
 //14 tips
-/*
+
 //normal
 console.log('Normal log: console.log("Normal"):');
 console.log('Normal');
@@ -193,5 +134,3 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
     console.log(data);
   });
 console.log('---------------------------');
-
-*/
