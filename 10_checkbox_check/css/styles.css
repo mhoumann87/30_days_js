@@ -280,6 +280,33 @@ main {
   height: auto;
 }
 
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem auto;
+}
+
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 2px solid var(--font);
+}
+
+.list-item input {
+  margin-right: 2rem;
+}
+
+.list-item p {
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
 @supports (grid-area: auto) {
   @media screen and (min-width: 56.250rem) {
 
