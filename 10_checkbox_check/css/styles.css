@@ -3,11 +3,11 @@
 */
 
 :root {
-  --background: #E0EFFC;
-  --accent: #ffffff;
-  --rgba: rgba(255, 255, 255, .8);
-  --font: #282828;
-  --link-hover: #A14000;
+  --background: #A75C3F;
+  --accent: #644034;
+  --rgba: rgba(167, 92, 63, .4);
+  --font: #C9C7A1;
+  --link-hover: #998463;
 }
 
 /* Base */
@@ -262,3 +262,41 @@ footer {
 /* 
 * Main Section
 */
+main {
+  padding: 0 10px;
+}
+
+.present {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.present-photo img {
+  width: 100%;
+  height: auto;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.250rem) {
+
+    .present {
+      width: 100%;
+      margin: 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .present-text {
+      flex: 0 0 45%;
+    }
+
+    .present-photo {
+      flex: 0 0 50%;
+    }
+
+  }
+}
