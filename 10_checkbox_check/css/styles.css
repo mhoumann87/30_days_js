@@ -307,6 +307,10 @@ main {
   flex-grow: 1;
 }
 
+input:checked+p {
+  text-decoration: line-through;
+}
+
 @supports (grid-area: auto) {
   @media screen and (min-width: 56.250rem) {
 
