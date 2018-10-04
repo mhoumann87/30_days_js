@@ -41,7 +41,7 @@ a:active {
 a:hover {
   color: #A14000;
 }
- 
+
 /* Header */
 header {
   margin: 0;
@@ -60,13 +60,13 @@ header {
 .text {
   background-color: #fff;
   padding: .8rem;
-  }
+}
 
-  .text h1 {
+.text h1 {
   font-size: 2rem;
   font-weight: 400;
-  margin:0;
-  
+  margin: 0;
+
 }
 
 .text a,
@@ -74,10 +74,10 @@ header {
   color: #282828;
   text-decoration: none;
   margin: 0;
-  }
+}
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em)  {
+  @media screen and (min-width: 56.250em) {
 
     header {
       flex-direction: row;
@@ -101,14 +101,14 @@ header {
 
     .text h1 {
       font-size: 3rem;
-       margin:0;
+      margin: 0;
     }
-    
+
   }
 
 }
 
-  
+
 /* Navigation */
 
 nav {
@@ -140,7 +140,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0a9";
   margin: 0 10px;
 }
 
@@ -155,7 +157,7 @@ nav {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em)  {
+  @media screen and (min-width: 56.250em) {
 
     nav {
       display: flex;
@@ -183,12 +185,16 @@ blockquote {
 }
 
 blockquote::before {
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f10e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
   margin: 0 10px;
 }
 
 blockquote::after {
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10d";
   margin: 0 10px;
 }
 
@@ -255,13 +261,13 @@ tr:nth-child(even) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
 }
 
 .show-inv {
   width: 100%;
   margin: 2rem 0;
-  }
+}
 
 .inv-errror {
   text-align: center;
@@ -273,7 +279,7 @@ tr:nth-child(even) {
 
 .snippet {
   padding: 10px;
-  background-color: lightgray; 
+  background-color: lightgray;
 }
 
 code {
@@ -304,55 +310,56 @@ code {
 .map h4 {
   font-family: 'Mukta Malar', sans-serif;
   font-size: 1.4rem;
-  }
+}
 
-  .map-result {
-    background-color: teal;
-    font-size: 1.3rem;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .reduce {
-    padding: 2rem 10px;
-  }
-  .reduce h4 {
-    font-family: 'Mukta Malar', sans-serif;
-    font-size: 1.4rem;
-  }
+.map-result {
+  background-color: teal;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
 
-  #resTotalAge {
-    background-color: teal;
-    font-size: 1.3rem;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
+.reduce {
+  padding: 2rem 10px;
+}
 
-  .result-transport {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.3rem;
-    background-color: teal;
-    color: #fff;
-    padding: 1rem;
-  }
+.reduce h4 {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.4rem;
+}
 
-  .sort {
-    padding: 2rem 10px;
-    background-color: #fff;
-  }
+#resTotalAge {
+  background-color: teal;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
 
-  .sort h4 {
-    font-family: 'Mukta Malar', sans-serif;
-    font-size: 1.4rem;
-  }
+.result-transport {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  background-color: teal;
+  color: #fff;
+  padding: 1rem;
+}
 
-  .showSortedInventors {
-    width: 250px;
-    margin: 0 auto;
-  }
+.sort {
+  padding: 2rem 10px;
+  background-color: #fff;
+}
+
+.sort h4 {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.4rem;
+}
+
+.showSortedInventors {
+  width: 250px;
+  margin: 0 auto;
+}
 
 
 @supports (grid-area: auto) {
@@ -361,7 +368,7 @@ code {
 
     main {
       width: 100%;
-     }
+    }
 
     .sec-head {
       flex-direction: row-reverse;
@@ -386,14 +393,13 @@ code {
     }
 
     .showSortedInventors {
-      margin-top: 2rem
-      ;
+      margin-top: 2rem;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 2rem;
     }
-    
+
   }
 }
 
@@ -430,7 +436,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  
+
 }
 
 
@@ -443,26 +449,26 @@ footer {
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .contact {
       display: flex;
       flex-direction: column;
       flex-shrink: 1;
     }
-    
+
     .contact a {
       margin-bottom: 10px;
     }
-    
+
     .social a {
       font-size: 1.5rem;
     }
-    
+
     .copy {
       flex-grow: 1;
       text-align: center;
     }
-    
+
     .social {
       width: auto;
       flex-grow: 1;
