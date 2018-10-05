@@ -8,6 +8,8 @@
   --rgba: rgba(170, 171, 211, .7);
   --font: #F8FAFF;
   --link-hover: #CBA6C3;
+  --paragraphs: 'Mukta Malar', sans-serif;
+  --headlines: 'Syncopate', sans-serif;
 }
 
 /* Base */
@@ -16,7 +18,7 @@ body {
   background-color: var(--background);
   color: var(--font);
   font-size: 90%;
-  font-family: 'Mukta Malar', sans-serif;
+  font-family: var(--paragraphs);
 }
 
 @media screen and (min-width: 56.250rem) {
@@ -40,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Syncopate', sans-serif;
+  font-family: var(--headlines);
   font-weight: 700;
 }
 
@@ -262,3 +264,78 @@ footer {
 /* 
 * Main Section
 */
+
+main {
+  margin: 0;
+  padding: 10px;
+}
+
+.text-box {
+  color: #282828;
+  background-color: var(--font);
+  padding: 2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+main a,
+main a:visited,
+main a:active {
+  color: #282828;
+}
+
+main a:hover {
+  color: var(--link-hover);
+}
+
+main h4 {
+  font-family: var(--paragraphs);
+  font-size: 1.5rem;
+}
+
+main ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.landscape {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+.portrait {
+  width: auto;
+  height: 100%;
+  max-height: 350px;
+}
+
+.left {
+  float: left;
+  padding-right: 20px;
+}
+
+.right {
+  float: right;
+  padding-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}

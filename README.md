@@ -18,7 +18,7 @@ Her er my solotions to the Projects
 * [x] Day 10 - Hold Shift to Check Multiple Checkboxes - made 2018-10-02
 * [x] Day 11 - Custom HTML5 Video Player - made 2018-10-03
 * [x] Day 12 - Key Sequence Detection (KONAMI CODE) - made 2018-10-04
-* [ ] Day 13 - Slide In on Scroll - made
+* [x] Day 13 - Slide In on Scroll - made 2018-10-05
 * [ ] Day 14 - Object and Arrays - Reference VS Copy - made
 * [ ] Day 15 - LocalStorage and Event Delegation - made
 * [ ] Day 16 - CSS Text Shadow Mouse Move Effect - made
