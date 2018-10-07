@@ -329,6 +329,10 @@ blockquote::after {
   margin: 0 10px;
 }
 
+.examples-def {
+  flex: 0 0 40%;
+}
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {

@@ -222,6 +222,73 @@
       </div>
     </section>
 
+    <section class="show-case">
+      <div class="examples">
+        <div class="examples-def">
+          <h5>Object</h5>
+          <p>JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a
+            property is an association between a name (or key) and a value. A property's value can be a function, in
+            which case the property is known as a method. In addition to objects that are predefined in the browser,
+            you can define your own objects. This chapter describes how to use objects, properties, functions, and
+            methods, and how to create your own objects.</p>
+          <p>The same problem with copying an array, are also applying to copieng an object, but right now there are
+            only one way to make a copy of an object that won't change value, when the original are changed.</p>
+        </div>
+        <div class="example code">
+          <h5>Object</h5>
+          <code>const michael = {name: "Michael", age: 50, socialMedia: {facebook:
+            "michael.houmann", twitter: "@MichaelHoumann"}};</code>
+
+
+        </div>
+      </div>
+
+      <div class="show-result">
+        <h5>Example:</h5>
+        <table>
+
+          <tr>
+            <td>Create an object:</td>
+            <td><code>const michael = {name: "Michael", age: 50, socialMedia: {facebook:
+                "michael.houmann", twitter: "@MichaelHoumann"}};</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="firstObj"></code></td>
+          </tr>
+          <tr>
+            <td>Copy the object</td>
+            <td><code>let michael2 = michael;</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="secondObj"></code></td>
+          </tr>
+          <tr>
+            <td>Change an element in the original object</td>
+            <td><code>michael.age = 51;</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="changedObj"></code></td>
+          </tr>
+          <tr>
+            <td>The right way to copy an object</td>
+            <td><code>const michael3 = Object.assign({}, michael, {age: 50});</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="newObj"></code></td>
+          </tr>
+        </table>
+
+
+        <p>All defenitions are copied from <a href="https://developer.mozilla.org/en-US/" target="_blank">MDM Web Docs
+            at Mozilla</a>.</p>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>

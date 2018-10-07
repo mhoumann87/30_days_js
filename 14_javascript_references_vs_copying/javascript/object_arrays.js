@@ -33,3 +33,49 @@ document.getElementById('bothBeatles').innerHTML = `<span>newBeatles = ${newBeat
 
 newBeatles[3] = 'Ringo';
 document.getElementById('alteredBeatles').innerHTML = `<span>newBeatles = ${newBeatles},</span><br><span>oldBeatles = ${oldBeatles}</span>;`;
+
+// * Object
+
+const michael = {
+  name: 'Michael',
+  age: 50,
+  socialMedia: {
+    facebook: 'michael.houmann',
+    twitter: '@MichaelHoumann'
+  }
+};
+
+const michael2 = michael;
+
+document.getElementById('secondObj').innerHTML = `michael = <br>
+                                                  name: ${michael.name}<br>
+                                                  age: ${michael.age} <br>
+                                                  socialMedia: {facebook: ${michael.socialMedia.facebook}, <br>twitter: ${michael.socialMedia.twitter}};
+                                                  michael2 = <br>
+                                                  name: ${michael2.name}<br>
+                                                  age: ${michael2.age} <br>
+                                                  socialMedia: {facebook: ${michael2.socialMedia.facebook}, <br>twitter: ${michael2.socialMedia.twitter}};`;
+
+michael.age = 51;
+
+document.getElementById('newObj').innerHTML = `michael = <br>
+                                                  name: ${michael.name}<br>
+                                                  age: ${michael.age} <br>
+                                                  socialMedia: {facebook: ${michael.socialMedia.facebook}, <br>twitter: ${michael.socialMedia.twitter}};<br>
+                                                  michael2 = <br>
+                                                  name: ${michael2.name}<br>
+                                                  age: ${michael2.age} <br>
+                                                  socialMedia: {facebook: ${michael2.socialMedia.facebook}, <br>twitter: ${michael2.socialMedia.twitter}};`;
+
+const michael3 = Object.assign({}, michael, {
+  age: 50
+});
+
+document.getElementById('newObj').innerHTML = `michael = <br>
+                                                  name: ${michael.name}<br>
+                                                  age: ${michael.age} <br>
+                                                  socialMedia: {facebook: ${michael.socialMedia.facebook}, <br>twitter: ${michael.socialMedia.twitter}};<br>
+                                                  michael3 = <br>
+                                                  name: ${michael3.name}<br>
+                                                  age: ${michael3.age} <br>
+                                                  socialMedia: {facebook: ${michael3.socialMedia.facebook}, <br>twitter: ${michael3.socialMedia.twitter}};`;
