@@ -8,6 +8,8 @@
   --rgba: rgba(255, 255, 255, .8);
   --font: #282828;
   --link-hover: #A14000;
+  --body-font: 'Mukta Malar', sans-serif;
+  --headline-font: 'Syncopate', sans-serif;
 }
 
 /* Base */
@@ -16,7 +18,7 @@ body {
   background-color: var(--background);
   color: var(--font);
   font-size: 90%;
-  font-family: 'Mukta Malar', sans-serif;
+  font-family: var(--body-font);
 }
 
 @media screen and (min-width: 56.250rem) {
@@ -40,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Syncopate', sans-serif;
+  font-family: var(--headline-font);
   font-weight: 700;
 }
 

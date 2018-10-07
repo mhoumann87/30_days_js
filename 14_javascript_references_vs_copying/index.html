@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>michael-h.dk - 30 days of JavaScript</title>
   <link rel="stylesheet" href="../assets/css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Syncopate:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Space+Mono|Syncopate:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
@@ -30,21 +30,200 @@
   <div class="breadcrumbs">
     <div class="crumbs-links">
       <a class="crumb" href="../index.html">30daysJS</a>
+      <a class="crumb" href="./index.html">JavaScript References VS Copying</a>
     </div>
     <div class="site-id">
-      30 days of JavaScript
+      JavaScript References VS Copying
     </div>
   </div>
 
   <main>
 
-    <div class="present">
+    <section class="present">
       <div class="present-photo">
         <img src="./images/chris-lawton-154388-unsplash.jpg" alt="Photo by Chris Lawton on Unsplash.com">
       </div>
-    </div>
+
+      <div class="present-text">
+        <h2>JavaScript References VS Copying</h2>
+        <p>Working with code in JavaScript, there are a lot of possibilities to make mistakes, and some times it could
+          be your own fault.</p>
+        <p>One of the areas there are likely to make some errors in your code, is when you are changin the values in
+          variabled. It is not always that logical, but I will try to make it a little easier to understant.</p>
+        <p>I know that I have learned a lot just by making this page.</p>
+        <p></p>
+      </div>
+    </section>
+
+    <section class="show-case">
+      <div class="examples">
+        <div class="examples-def">
+          <h5>Strings</h5>
+          <p>JavaScript strings are used for storing and manipulating text.</p>
+          <h5>Numbers</h5>
+          <p>JavaScript has only one type of number. Numbers can be written with or without decimals.</p>
+          <h5>Boolean</h5>
+          <p>A JavaScript Boolean represents one of two values: <strong>true</strong> or <strong>false</strong>.</p>
+          <p>When you make a copy, and change the value of the first variable, the copy still keep that value.</p>
+        </div>
+        <div class="example code">
+          <h5>Strings</h5>
+          <code>const firstName = "Michael";</code>
+          <h5>Numbers</h5>
+          <code>const age = 51;</code><br>
+          <code>const pi = 3.14;</code>
+          <h5>Boolean</h5>
+          <code>const isRich = false;</code>
+
+        </div>
+      </div>
+
+      <div class="show-result">
+        <h5>Example:</h5>
+        <table>
+
+          <tr>
+            <td>Declare a variable with var, let or const:</td>
+            <td><code>let firstName;</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="let"></code></td>
+          </tr>
+          <tr>
+            <td>Give the variable a value</td>
+            <td><code>firstName = "Michael";</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="name"></code></td>
+          </tr>
+          <tr>
+            <td>Make a copy of firstName</td>
+            <td><code>let firstName2 = firstname;</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="name2"></code></td>
+          </tr>
+          <tr>
+            <td>Change firstName</td>
+            <td><code>firstName = "Mike";</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="changedName"></code></td>
+          </tr>
+
+        </table>
+
+      </div>
+    </section>
+
+
+    <section class="show-case">
+      <div class="examples">
+        <div class="examples-def">
+          <h5>Array</h5>
+          <p>The Array object is used to store multiple values in a single variable.</p>
+          <p>Array indexes are zero-based: The first element in the array is 0, the second is 1, and so on.</p>
+          <p>If you make a copy of an array like we did with the variable, and change an element in the array, both
+            arrays will change.</p>
+          <p>If you want to copy an array, without having them affect eachother, there are some ways to do that:</p>
+        </div>
+        <div class="example code">
+          <h5>Array</h5>
+          <code>const beatles = ["John", "Paul", "George", "Pete"];</code>
+
+
+        </div>
+      </div>
+
+      <div class="show-result">
+        <h5>Example:</h5>
+        <table>
+
+          <tr>
+            <td>Create an array:</td>
+            <td><code>let beatles = ["John", "Paul", "George", "Pete"];</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="first"></code></td>
+          </tr>
+          <tr>
+            <td>Copy the array</td>
+            <td><code>let betterBeatles = beatles;</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="firstCopy"></code></td>
+          </tr>
+          <tr>
+            <td>Change an element in the original array</td>
+            <td><code>beatles[3] = "Ringo";</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="arrayCopy2"></code></td>
+          </tr>
+        </table>
+        <p>As you can see both arrays changed their value. If your want to make a copy, that won't change values with
+          the first, you have a few options.</p>
+        <p>1. You can use the slice() function:<br>
+          <blockquote>The slice() method returns a shallow copy of a portion of an array into a new array object
+            selected from begin to end (end not included). The original array will not be modified.</blockquote><br>
+          When you don't give any arguments, you make a direct copy of an array.<br>
+          <code>let betterBeatles = beatles.slice()</code>
+        </p>
+        <p>2. You can use the concat() function:<br>
+          <blockquote>The concat() method is used to merge two or more arrays. This method does not change the existing
+            arrays, but instead returns a new array.</blockquote><br>
+          When you use the concat() methode with an empty array, you get a copy<br>
+          <code>let betterBeatles = [].concat(beatles);</code>
+        </p>
+        <p>3. You can use the new spread operator:<br>
+          <blockquote>Spread syntax allows an iterable such as an array expression or string to be expanded in places
+            where zero or more arguments (for function calls) or elements (for array literals) are expected, or an
+            object expression to be expanded in places where zero or more key-value pairs (for object literals) are
+            expected.</blockquote>
+        </p>
+        <table>
+          <tr>
+            <td>Make the first array</td>
+            <td>let newBeatles = ["John", "Paul", "George", "Pete"]</td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="newBeatles"></code></td>
+          </tr>
+          <tr>
+            <td>Copy the array</td>
+            <td>let oldBeatles = [...newBeatles];</td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="bothBeatles"></code></td>
+          </tr>
+          <tr>
+            <td>Change an element in the first array</td>
+            <td><code>newBeatles[3] = "Ringo";</code></td>
+          </tr>
+          <tr>
+            <td>Value</td>
+            <td><code id="alteredBeatles"></code></td>
+          </tr>
+          <tr>
+        </table>
+
+        <p>All defenitions are copied from <a href="https://developer.mozilla.org/en-US/" target="_blank">MDM Web Docs
+            at Mozilla</a>.</p>
+
+      </div>
+    </section>
 
   </main>
+
   <footer>
     <!--Are going to work with the rest of the website -->
     <div class="contact">
