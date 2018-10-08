@@ -20,7 +20,7 @@ Her er my solotions to the Projects
 * [x] Day 12 - Key Sequence Detection (KONAMI CODE) - made 2018-10-04
 * [x] Day 13 - Slide In on Scroll - made 2018-10-05
 * [x] Day 14 - Object and Arrays - Reference VS Copy - made 2018-10-07
-* [ ] Day 15 - LocalStorage and Event Delegation - made
+* [x] Day 15 - LocalStorage and Event Delegation - made 2018-10-08
 * [ ] Day 16 - CSS Text Shadow Mouse Move Effect - made
 * [ ] Day 17 - Sorting Band Names without articles - made
 * [ ] Day 18 - Tally String Times with Reduc - made
