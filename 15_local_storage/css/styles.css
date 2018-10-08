@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #E0EFFC;
-  --accent: #ffffff;
-  --rgba: rgba(255, 255, 255, .8);
-  --font: #282828;
-  --accent-font: #282828;
-  --link-hover: #A14000;
+  --background: #cbe5f6;
+  --accent: #76A2BF;
+  --rgba: rgba(203, 229, 246, .6);
+  --font: #40555A;
+  --accent-font: #F7EBC1;
+  --link-hover: #172D3B;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -102,7 +102,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/foto_top.jpg");
+      background-image: url("../images/cv_top.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -172,6 +172,7 @@ nav {
   cursor: pointer;
 }
 
+
 @supports (grid-area: auto) {
   @media screen and (min-width: 56.250em) {
 
@@ -222,7 +223,6 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 footer a,
@@ -234,6 +234,7 @@ footer a:active {
 footer a:hover {
   color: var(--link-hover);
 }
+
 
 
 
