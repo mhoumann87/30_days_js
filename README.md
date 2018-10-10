@@ -22,7 +22,7 @@ Her er my solotions to the Projects
 * [x] Day 14 - Object and Arrays - Reference VS Copy - made 2018-10-07
 * [x] Day 15 - LocalStorage and Event Delegation - made 2018-10-08
 * [x] Day 16 - CSS Text Shadow Mouse Move Effect - made 2018-10-09
-* [ ] Day 17 - Sorting Band Names without articles - made
+* [x] Day 17 - Sorting Band Names without articles - made 2018-10-10
 * [ ] Day 18 - Tally String Times with Reduc - made
 * [ ] Day 19 - Unreal Webcam Fun - made
 * [ ] Day 20 - Native Speech Recognition - made

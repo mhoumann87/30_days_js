@@ -284,4 +284,62 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 2rem 0;
+}
+
+.list-box {
+  background-color: rgba(225, 192, 169, .8);
+  padding: 3rem;
+}
+
+.list-box ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+}
+
+input[type=text] {
+  padding: .4rem;
+  font-size: 1.4rem;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  border-bottom: 2px solid var(--accent);
+  font-family: var(--body-font);
+}
+
+input[type=submit] {
+  border: none;
+  outline: 0;
+  margin-left: .8rem;
+  font-size: 1.4rem;
+  color: var(--accent-font);
+  background-color: var(--accent);
+}
+
+submit {
+  border: 2px solid var(--accent);
+}
+
+.list-box li {
+  font-size: 1.4rem;
+  padding: .4rem;
+}
+
+.list-box li:not(:last-child) {
+  border-bottom: 2px solid var(--accent);
+}
+
+.list-box h2 {
+  margin: 0 .3rem;
+}
+
+.msg {
+  color: #FF0000;
 }
