@@ -8,6 +8,7 @@
   <title>michael-h.dk - 30 days of JavaScript</title>
   <link rel="stylesheet" href="../assets/css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Syncopate:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
@@ -51,12 +52,35 @@
         <p>A javascript program that take the time information from video clips, and add them up to a total time.</p>
         <p>The challenge is that the time codes are hidden in the HTML, so we have to get that out, and turned into an
           array, that we can map over and run the reduce function on.</p>
+        <p>In code it looks like this:</p>
+        <p class="code-block"><code>
+            const seconds = timeData<br>
+            .map(node => node.dataset.time)<br>
+            .map(timeCode => {<br>
+            [mins, secs] = timeCode.split(':')<br>
+            .map(parseFloat);<br>
+            return (mins * 60) + secs;<br>
+            })<br>
+            .reduce((total, vidSeconds) => total + vidSeconds);
+          </code></p>
       </div>
     </section>
 
     <section class="video-counter">
-      <h5>The Data Set</h5>
+
+      <div class="time">
+        <h4>The Total Time Is:</h4>
+        <p id="time">Test time</p>
+      </div>
+
+
       <table class="videos">
+        <tr>
+          <th>
+            <h5>The Data Set</h5>
+          </th>
+          <th></th>
+        </tr>
         <tr>
           <td data-time="5:43">
             Video 1
@@ -442,7 +466,7 @@
 
     <div class="social">
 
-      <div><a href="https://www.tdnkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-tdnkedin"></i></a></div>
+      <div><a href="https://www.tdnkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
       <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
       <div><a href="https://www.freecodecamp.org/mhoumann87" target="_blank"><i class="fab fa-free-code-camp"></i></a></div>
       <div><a href="https://codepen.io/michael-h/" target="_blank"><i class="fab fa-codepen"></i></a></div>
@@ -451,7 +475,7 @@
     </div>
   </footer>
 
-  <script src="./javascript/"></script>
+  <script src="./javascript/tally_times.js"></script>
 </body>
 
 </html>

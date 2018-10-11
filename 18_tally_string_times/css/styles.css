@@ -292,6 +292,55 @@ main {
   height: auto;
 }
 
+.video-counter table {
+  width: 25%;
+  margin: 1rem auto;
+  border: 1px solid var(--accent);
+  border-collapse: collapse;
+}
+
+
+.video-counter td {
+  padding: 10px;
+}
+
+.video-counter tr:nth-child(odd) {
+  background-color: var(--accent-font);
+}
+
+.video-counter th {
+  background-color: var(--accent);
+  color: var(--accent-font);
+  padding: 0 10px;
+}
+
+.video-counter th h5 {
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.time {
+  text-align: center;
+}
+
+.time p {
+  font-size: 2rem;
+}
+
+code {
+  font-family: 'Space Mono', monospace;
+}
+
+.code-block {
+  background-color: var(--accent-font);
+  margin-left: 3rem;
+  padding: 10px;
+  ;
+}
+
+
+
 @supports (grid-area: auto) {
 
   @media screen and (min-width: 56.250rem) {
