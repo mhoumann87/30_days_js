@@ -30,28 +30,34 @@
   <div class="breadcrumbs">
     <div class="crumbs-links">
       <a class="crumb" href="../index.html">30daysJS</a>
+      <a class="crumb" href="./index.html">Webcam Fun</a>
     </div>
     <div class="site-id">
-      30 days of JavaScript
+      Webcam Fun
     </div>
   </div>
 
   <main>
     <h2>Webcam Fun</h2>
-    <div class="select">
+    <div class="select-effect">
       <form id="select">
-        <input type="radio" name="effect" value="photoBooth">Photo Booth<br>
-        <input type="radio" name="effect" value="greenScreen">Green Screen<br>
-        <input type="radio" name="effect" value="rgb">RBG effect<br>
-
+        <div class="input">
+          <input type="radio" name="effect" value="photoBooth" checked>Photo Booth<br>
+        </div>
+        <div class="input">
+          <input type="radio" name="effect" value="greenScreen">Green Screen<br>
+        </div>
+        <div class="input">
+          <input type="radio" name="effect" value="rgb">RBG effect<br>
+        </div>
       </form>
-    </div>
-    <div class="canvas-box">
-      <canvas class="photo"></canvas>
-      <video class="player"></video>
-      <div class="strip"></div>
-      <div class="controls"></div>
-    </div>
+      </form>
+      <div class="canvas-box">
+        <canvas class="photo"></canvas>
+        <video class="player"></video>
+        <div class="strip"></div>
+        <div class="controls"></div>
+      </div>
   </main>
   <footer>
     <!--Are going to work with the rest of the website -->
