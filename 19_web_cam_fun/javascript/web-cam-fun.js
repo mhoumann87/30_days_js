@@ -28,7 +28,11 @@ function chooseEffect(event) {
 }
 
 function photoBooth() {
-  controls.innerHTML = `<button class="take-photo">Take Photo</button>`;
+  controls.innerHTML = `<button class="takePhoto">Take Photo</button>`;
+
+  document.querySelector('.takePhoto').addEventListener('click', function () {
+    console.log('clicked');
+  });
 }
 
 function greenScreen() {
