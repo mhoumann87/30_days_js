@@ -1,27 +1,62 @@
 //copyright
-const pos = document.querySelector('#copy');
+const pos = document.querySelector("#copy");
 const year = new Date().getFullYear();
-(year === 2018) ? pos.innerHTML = `<i class="far fa-copyright"></i>2018`: pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
+year === 2018
+  ? (pos.innerHTML = `<i class="far fa-copyright"></i>2018`)
+  : (pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`);
 
 /* 
  * Web cam fun
  */
 
+// Get the selectors for the webcam
+const video = document.querySelector(".player");
+const canvas = document.querySelector(".photo");
+const ctx = canvas.getContext("2d");
+const strip = document.querySelector(".strip");
+let pixels;
+
+// Get the video feed from the webcam
+function getVideo() {
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(localMediaStream => {
+      video.srcObject = localMediaStream;
+      video.play();
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+function paintVideoToCanvas(pixels) {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    pixels = ctx.getImageData(0, 0, width, height);
+    //pixels.rgbSplit(pixels);
+    ctx.putImageData(pixels, 0, 0);
+  }, 16);
+}
 // Get the checkboxes for selecting functtions
-document.querySelector('form').addEventListener('change', chooseEffect);
-const controls = document.querySelector('.controls');
+document.querySelector("form").addEventListener("change", chooseEffect);
+const controls = document.querySelector(".controls");
 
 function chooseEffect(event) {
-
   switch (event.target.value) {
-
-    case 'photoBooth':
+    case "photoBooth":
       photoBooth();
       break;
-    case 'greenScreen':
+    case "greenScreen":
       greenScreen();
       break;
-    case 'rgb':
+    case 'redEffect':
+      redEffect();
+      break;
+    case "rgb":
       rgb();
       break;
   }
@@ -29,10 +64,17 @@ function chooseEffect(event) {
 
 function photoBooth() {
   controls.innerHTML = `<button class="takePhoto">Take Photo</button>`;
-
   document.querySelector('.takePhoto').addEventListener('click', function () {
-    console.log('clicked');
+
+    const data = canvas.toDataURL('image/jpeg');
+    const link = document.createElement('a');
+    link.href = data;
+    link.setAttribute('download', 'picture');
+    link.innerHTML = `<img src="${data}" alt="great picture">`;
+    strip.insertBefore(link, strip.firstChild);
   });
+
+  getVideo();
 }
 
 function greenScreen() {
@@ -62,4 +104,16 @@ function rgb() {
   `;
 }
 
+function redEffect() {
+  controls.innerHTML = ``;
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i + 0] = pixels.data[i + 0] + 200;
+    pixels.data[i + 1] = pixels.data[i + 1] - 50;
+    pixels.data[i + 2] = pixels.data[i + 2] * 0.5;
+  }
+  drawImage(pixels);
+  getVideo();
+}
+
 photoBooth();
+video.addEventListener('canplay', paintVideoToCanvas);
