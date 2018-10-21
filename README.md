@@ -24,7 +24,7 @@ Her er my solotions to the Projects
 * [x] Day 16 - CSS Text Shadow Mouse Move Effect - made 2018-10-09
 * [x] Day 17 - Sorting Band Names without articles - made 2018-10-10
 * [x] Day 18 - Tally String Times with Reduce - made 2018-10-11
-* [ ] Day 19 - Unreal Webcam Fun - made
+* [x] Day 19 - Unreal Webcam Fun - made 2018-10-21
 * [ ] Day 20 - Native Speech Recognition - made
 * [ ] Day 21 - Geolocation based Speedometer and Compass - made
 * [ ] Day 22 - Follow Along Links - made

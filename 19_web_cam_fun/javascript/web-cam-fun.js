@@ -49,7 +49,7 @@ function getVideo() {
       video.play();
     })
     .catch(err => {
-      console.error(err);
+      strip.innerHTML = `<h4>You need to have a webcam connected to use this page</h4>`;
     });
 }
 

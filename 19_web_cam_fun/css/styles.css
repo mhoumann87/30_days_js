@@ -98,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      /* background-image: url("../images/top_keyboard.jpg"); */
+      background-image: url("../images/top_keyboard.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -288,6 +288,11 @@ input {
 
 .canvas-box {
   margin-bottom: 2rem;
+}
+
+.canvas-box h4 {
+  font-family: var(--body-font);
+  font-size: 1.4rem;
 }
 
 .player {
