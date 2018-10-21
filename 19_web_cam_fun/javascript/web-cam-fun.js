@@ -1,65 +1,116 @@
 //copyright
 const pos = document.querySelector('#copy');
 const year = new Date().getFullYear();
-(year === 2018) ? pos.innerHTML = `<i class="far fa-copyright"></i>2018`: pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
+year === 2018 ?
+  (pos.innerHTML = `<i class="far fa-copyright"></i>2018`) :
+  (pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`);
 
 /* 
  * Web cam fun
  */
 
-// Get the checkboxes for selecting functtions
-document.querySelector('form').addEventListener('change', chooseEffect);
+//Get all the elements on the page
+const video = document.querySelector('.player');
+const canvas = document.querySelector('.photo');
+const strip = document.querySelector('.strip');
+const choose = document.querySelector('form');
 const controls = document.querySelector('.controls');
 
-function chooseEffect(event) {
 
-  switch (event.target.value) {
+const ctx = canvas.getContext('2d');
+const levels = {};
+let effect = 'photoBooth';
 
-    case 'photoBooth':
-      photoBooth();
-      break;
-    case 'greenScreen':
-      greenScreen();
-      break;
-    case 'rgb':
-      rgb();
-      break;
+choose.addEventListener('change', setEffect);
+
+function setEffect(event) {
+  effect = event.target.value;
+  setControls();
+  paintToCanvas();
+}
+
+function setControls() {
+  if (effect === 'redEffect') {
+    controls.innerHTML = `<h4>Red Effect</h4> `;
+  } else if (effect === 'rgb') {
+    controls.innerHTML = `<h4>RGB Effect</h4> `;
+  } else {
+    controls.innerHTML = `<button class="takePhoto">Take Photo</button>`;
   }
 }
 
-function photoBooth() {
-  controls.innerHTML = `<button class="takePhoto">Take Photo</button>`;
+function getVideo() {
+  navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false
+    })
+    .then(localMediaStream => {
+      video.srcObject = localMediaStream;
+      video.play();
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
 
-  document.querySelector('.takePhoto').addEventListener('click', function () {
-    console.log('clicked');
+function paintToCanvas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  if (effect === 'photoBooth') {
+    takePhoto();
+  }
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
+
+    if (effect === 'redEffect') {
+      pixels = redEffect(pixels);
+    }
+
+    if (effect === 'rgb') {
+      pixels = rgb(pixels);
+    }
+
+    ctx.putImageData(pixels, 0, 0);
+
   });
 }
 
-function greenScreen() {
-  controls.innerHTML = ``;
+function takePhoto() {
+  document.querySelector('.takePhoto').addEventListener('click', function () {
+
+    const data = canvas.toDataURL('image/jpeg');
+    const link = document.createElement('a');
+    link.href = data;
+    link.setAttribute('download', 'image');
+    link.innerHTML = `<img src="${data}" alt="Image from Photo Booth">`;
+    strip.insertBefore(link, strip.firstChild);
+  });
 }
 
-function rgb() {
-  controls.innerHTML = `
-      <div class="red slider">
-        <label for="rmin">Red Min:</label>
-        <input type="range" min=0 max=255 name="rmin">
-        <label for="rmax">Red Max:</label>
-        <input type="range" min=0 max=255 name="rmax">
-      </div>
-      <div class="green slider">
-        <label for="gmin">Green Min:</label>
-        <input type="range" min=0 max=255 name="gmin">
-        <label for="gmax">Green Max:</label>
-        <input type="range" min=0 max=255 name="gmax">
-        </div>
-      <div class="blue slider">
-        <label for="bmin">Blue Min:</label>
-        <input type="range" min=0 max=255 name="bmin">
-        <label for="bmax">Blue Max:</label>
-        <input type="range" min=0 max=255 name="bmax">
-      </div>
-  `;
+function redEffect(pixels) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i + 0] = pixels.data[i + 0] + 200;
+    pixels.data[i + 1] = pixels.data[i + 1] - 50;
+    pixels.data[i + 2] = pixels.data[i + 2] * 0.5;
+  }
+  return pixels;
 }
 
-photoBooth();
+function rgb(pixels) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
+    pixels.data[i - 150] = pixels.data[i + 0];
+    pixels.data[i + 500] = pixels.data[i + 1];
+    pixels.data[i - 550] = pixels.data[i + 2];
+  }
+  return pixels;
+}
+
+
+setControls();
+getVideo();
+video.addEventListener('canplay', paintToCanvas);
