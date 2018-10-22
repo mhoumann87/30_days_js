@@ -281,9 +281,54 @@ footer a:hover {
 main {
   width: 100%;
   margin: 0;
-  min-height: 85vh;
-  background-image: url("../images/alexander-andrews-636454-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+
+}
+
+.nav-box {
+  text-align: center;
+  margin: 0 3rem;
+}
+
+.nav-box p {
+  font-size: 1.2rem;
+}
+
+.arrow {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.2s;
+  transform: rotate(0deg);
+  display: inline-block;
+}
+
+.nav-box .speed {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 56.250em) {
+
+  main {
+    background-image: url("../images/alexander-andrews-636454-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .nav-box {
+    width: 20%;
+    margin: 0 auto;
+    /* min-height: 85vh*/
+    ;
+    background-color: rgba(164, 206, 209, .9);
+    padding: 2rem;
+  }
+
+  .nav-box p {
+    font-size: 1.6rem;
+  }
+
+  .nav-box .speed {
+    font-size: 4rem;
+  }
+
 }
