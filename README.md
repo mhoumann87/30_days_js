@@ -25,7 +25,7 @@ Her er my solotions to the Projects
 * [x] Day 17 - Sorting Band Names without articles - made 2018-10-10
 * [x] Day 18 - Tally String Times with Reduce - made 2018-10-11
 * [x] Day 19 - Unreal Webcam Fun - made 2018-10-21
-* [ ] Day 20 - Native Speech Recognition - made
+* [x] Day 20 - Native Speech Recognition - made 2018-10-22
 * [ ] Day 21 - Geolocation based Speedometer and Compass - made
 * [ ] Day 22 - Follow Along Links - made
 * [ ] Day 23 - Speech Synthesis - made
