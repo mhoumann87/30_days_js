@@ -286,6 +286,22 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
 
+.speech-box {
+  width: 75%;
+  margin: 0 auto;
+  background-color: var(--rgba);
+  padding: 1rem;
+  color: var(--accent-font);
+}
 
+.present {
+  margin: 1rem 0;
+}
+
+.words {
+  margin: 1rem;
+  padding: 10px;
+  background-color: rgba(240, 116, 65, .8)
 }
