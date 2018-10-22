@@ -113,4 +113,6 @@ typings/
 *.png 
 *.jpeg
 
+# API config
+*/**/api_config.js
 # End of https://www.gitignore.io/api/windows
