@@ -21,7 +21,11 @@ body {
   color: var(--font);
   font-size: 90%;
   font-family: var(--body-font);
+<<<<<<< HEAD
 
+=======
+  z-index: -9999;
+>>>>>>> 1dbbfa3f260aaa41bde32fe1bad2ffa2a752790a
 }
 
 @media screen and (min-width: 56.250rem) {
