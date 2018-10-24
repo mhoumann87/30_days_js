@@ -16,4 +16,34 @@ const speakBtn = document.querySelector('#speak');
 const stopBtn = document.querySelector('#stop');
 message.text = document.querySelector('[name=text]').value;
 
-console.log(message.text);
+// Get the voices from the system
+function populateVoices() {
+  voices = this.getVoices();
+  select.innerHTML = voices
+    .filter(voice => voice.lang.includes('en'))
+    .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
+    .join('');
+}
+
+function setVoice() {
+  message.voice = voices.find(voice => voice.name === this.value);
+  toggle();
+}
+
+function toggle(startOver = true) {
+  speechSynthesis.cancel();
+  if (startOver) {
+    speechSynthesis.speak(message);
+  }
+}
+
+function setOption() {
+  message[this.name] = this.value;
+  toggle();
+}
+
+speechSynthesis.addEventListener('voiceschanged', populateVoices);
+select.addEventListener('change', setVoice);
+options.forEach(option => option.addEventListener('change', setOption));
+speakBtn.addEventListener('click', toggle);
+stopBtn.addEventListener('click', toggle(false));

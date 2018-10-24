@@ -102,7 +102,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/foto_top.jpg");
+      background-image: url("../images/top_keyboard.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
