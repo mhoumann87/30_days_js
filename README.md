@@ -27,7 +27,7 @@ Her er my solotions to the Projects
 * [x] Day 19 - Unreal Webcam Fun - made 2018-10-21
 * [x] Day 20 - Native Speech Recognition - made 2018-10-22
 * [x] Day 21 - Geolocation based Speedometer and Compass - made 2018-10-23
-* [ ] Day 22 - Follow Along Links - made
+* [x] Day 22 - Follow Along Links - made 2018-10-24
 * [ ] Day 23 - Speech Synthesis - made
 * [ ] Day 24 - Sticky Nav - made
 * [ ] Day 25 - Event Capture, Propagation, Bubbling and Once - made
@@ -37,7 +37,7 @@ Her er my solotions to the Projects
 * [ ] Day 29 - Countdown Clock - made
 * [ ] Day 30 - Whack A Mole Game - made
 
- ======================================================
+======================================================
 
 ## Read more about the project at [JavaScript30.com](https://javascript30.com/)
 
