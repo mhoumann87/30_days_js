@@ -28,8 +28,8 @@ Her er my solotions to the Projects
 * [x] Day 20 - Native Speech Recognition - made 2018-10-22
 * [x] Day 21 - Geolocation based Speedometer and Compass - made 2018-10-23
 * [x] Day 22 - Follow Along Links - made 2018-10-24
-* [ ] Day 23 - Speech Synthesis - made
-* [ ] Day 24 - Sticky Nav - made
+* [x] Day 23 - Speech Synthesis - made 2018-10-25
+* [x] Day 24 - Sticky Nav - made 2018-10-26
 * [ ] Day 25 - Event Capture, Propagation, Bubbling and Once - made
 * [ ] Day 26 - Stripe Follow Along Dropdown - made
 * [ ] Day 27 - Click and Drag to Scroll - made
