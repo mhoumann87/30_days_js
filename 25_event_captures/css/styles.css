@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #E0EFFC;
-  --accent: #ffffff;
-  --rgba: rgba(255, 255, 255, .8);
-  --font: #282828;
-  --accent-font: #282828;
-  --link-hover: #A14000;
+  --background: #C1B5A3;
+  --accent: #805554;
+  --rgba: rgba(193, 181, 163, .6);
+  --font: #412F37;
+  --accent-font: #D9DEC8;
+  --link-hover: #BA6487;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -20,6 +20,11 @@ body {
   color: var(--font);
   font-size: 90%;
   font-family: var(--body-font);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 56.250rem) {
@@ -102,7 +107,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/foto_top.jpg");
+      background-image: url("../images/top_keyboard.jpg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -277,3 +282,31 @@ footer a:hover {
 /* 
 * Main Section
 */
+
+main {
+  padding: 0 0.5em;
+}
+
+.presentation {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 56.250em) {
+
+  .presentation {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .presentation-text {
+    flex: 1 1 49%;
+  }
+
+  .presentation-photo {
+    flex: 0 0 50%;
+  }
+}
