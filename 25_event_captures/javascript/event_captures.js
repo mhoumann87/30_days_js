@@ -4,16 +4,59 @@ const year = new Date().getFullYear();
 (year === 2018) ? pos.innerHTML = `<i class="far fa-copyright"></i>2018`: pos.innerHTML = `<i class="far fa-copyright"></i>2018 - ${year}`;
 
 /* 
- * Bubbeling -  Demostration of the bubbel effect
+ * Event Bubbeling -  Demostration of the bubbel effect
  */
 
 // Get all the divs
 const bubDivs = document.querySelectorAll('.bubExample');
-console.log(bubDivs);
 
 // When the div is clicked, set or remove the class
 // that with css reverses the color for the div
-function bubColorChange(e) {
+function bubColorChange() {
+  if (this.classList.contains('reverseColor')) {
+    this.classList.remove('reverseColor');
+  } else {
+    this.classList.add('reverseColor');
+  }
+
+}
+
+bubDivs.forEach(div => div.addEventListener('click', bubColorChange));
+
+/* 
+ * Event Capture - Demostration of the Event Capture effect
+ */
+
+// The code for are quite simular to the Bubbeling demo, execpt for the
+// div clases and the true in the eventListener, so you can read the comments for 
+// the bubbeling demo
+
+/* const capDivs = document.querySelectorAll('.capExample');
+
+function capChangeColor() {
+  if (this.classList.contains('reverseColor')) {
+    this.classList.remove('reverseColor');
+  } else {
+    this.classList.add('reverseColor');
+  }
+} */
+
+capDivs.forEach(div => div.addEventListener('click', capChangeColor, {
+  capture: true
+}));
+
+/* 
+ * Propagation - Demostration of the Propagation effect
+ */
+
+// The code for are quite simular to the Bubbeling demo, execpt for the
+// event.stopPropagation() on the functionn and  in the eventListener, so you can read the comments for 
+// the bubbeling demo
+
+const propaDivs = document.querySelectorAll('.propaExample');
+
+function propaChangeColor(event) {
+  event.stopPropagation();
   if (this.classList.contains('reverseColor')) {
     this.classList.remove('reverseColor');
   } else {
@@ -21,7 +64,8 @@ function bubColorChange(e) {
   }
 }
 
-bubDivs.forEach(div => div.addEventListener('click', bubColorChange));
+propaDivs.forEach(div => div.addEventListener('click', propaChangeColor));
+
 
 
 /* 
