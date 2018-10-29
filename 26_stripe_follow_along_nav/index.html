@@ -25,12 +25,74 @@
     </header>
 
     <nav>
-      <ul>
-        <li><a href="../index.html">30daysJS</a></li>
-        <li><a href="#">Michael</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Social</a></li>
-        <li><a href="#">Thanks</a></li>
+      <ul class="navbar">
+
+        <li>
+          <a href="../index.html">30daysJS</a>
+          <div class="dropdown ddHome">
+            <p>Go back to the frontpage</p>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Michael</a>
+          <div class="dropDown ddBio">
+            <div class="bio">
+              <img src="./images/profile_pic.jpg" alt="Photo of Michael Houmann">
+              <p>As a shy introvert with no life, Michael spends most of his time by the computer, usualy coding
+                something wierd or
+                looking at some tutorial online. Not by the computer you mostly find him with a book in his hands.</p>
+              <p>If he do leaves the house it is quite possible with a camera ready to shoot, and he will be avoiding
+                any human contact if possible.</p>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Skills</a>
+          <div class="dropDown ddSkills">
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>PHP</li>
+              <li>NodeJs</li>
+              <li>React</li>
+              <li>Vue</li>
+              <li>Angular</li>
+              <li>Adobe Suite</li>
+              <li>Photography</li>
+              <li>Videography</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Social</a>
+          <div class="dropdown ddSocial">
+            <div class="navSoc linked"><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i
+                  class="fab fa-linkedin"></i>&nbsp;Linkedin</a></div>
+            <div class="navSoc twit"><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></div>
+            <div class="navSoc free"><a href="https://www.freecodecamp.org/mhoumann87" target="_blank"><i class="fab fa-free-code-camp"></i>&nbsp;freeCodeCamp</a></div>
+            <div class="navSoc code"><a href="https://codepen.io/michael-h/" target="_blank"><i class="fab fa-codepen"></i>&nbsp;CodePen</a></div>
+            <div class="navSoc git"><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i>&nbsp;GitHub</a></div>
+          </div>
+        </li>
+        <li>
+          <a href="#thanks">Thanks</a>
+          <div class="dropdown ddThanks">
+            <p>Photos:</p>
+            <a href="https://unsplash.com/@leximphoto" target="_blank">Leximphoto</a>
+            <a href="https://unsplash.com/@neonbrand" target="_blank">NeONBRAND</a>
+            <a href="https://unsplash.com/@thetonyhernandez" target="_blank">Tony Hernandez</a>
+            <a href="https://unsplash.com/@dallehj" target="_blank">Daniel Jensen</a>
+            <a href="https://unsplash.com/@anniespratt" target="_blank">Annie Spratt</a>
+            <p>Words:</p>
+            <a href="http://www.zombieipsum.com/#" target="_blank">Zombie Ipsum</a>
+
+          </div>
+        </li>
       </ul>
     </nav>
 
@@ -110,7 +172,7 @@
         </p>
       </section>
 
-      <section class="thanks">
+      <section class="thanks" id="thanks">
         <h2>Thanks to:</h2>
         <p><a href="https://unsplash.com/@leximphoto" target="_blank">Leximphoto</a></p>
         <p><a href="https://unsplash.com/@neonbrand" target="_blank">NeONBRAND</a></p>
@@ -154,7 +216,7 @@
       </div>
     </footer>
 
-    <script src="./javascript/"></script>
+    <script src="./javascript/follow_along.js"></script>
   </body>
 
 </html>

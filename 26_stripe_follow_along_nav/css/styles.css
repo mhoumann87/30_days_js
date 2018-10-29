@@ -160,15 +160,19 @@ footer {
   align-items: center;
 }
 
+footer p,
+footer a {
+  color: var(--accent-font);
+  font-size: 1rem;
+}
+
 footer .social {
   flex: 0 0 33%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 2rem;
 }
 
-footer p,
-footer a {
-  color: var(--accent-font);
+footer .social a {
+  font-size: 2rem;
 }
