@@ -30,8 +30,8 @@ Her er my solotions to the Projects
 * [x] Day 22 - Follow Along Links - made 2018-10-24
 * [x] Day 23 - Speech Synthesis - made 2018-10-25
 * [x] Day 24 - Sticky Nav - made 2018-10-26
-* [ ] Day 25 - Event Capture, Propagation, Bubbling and Once - made
-* [ ] Day 26 - Stripe Follow Along Dropdown - made
+* [x] Day 25 - Event Capture, Propagation, Bubbling and Once - made 2018-10-28
+* [x] Day 26 - Stripe Follow Along Dropdown - made 2018-10-29
 * [ ] Day 27 - Click and Drag to Scroll - made
 * [ ] Day 28 - Video Speed Controller UI - made
 * [ ] Day 29 - Countdown Clock - made
