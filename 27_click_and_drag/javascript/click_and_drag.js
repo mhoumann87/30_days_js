@@ -65,7 +65,7 @@ function scrollEffect(event) {
   // Calculate how many pixels the mouse have moved
   //(Here we can add a bigger movement by multiplying the result)
   const walk = x - startX;
-  // We add the die distance to the divs and we have much rejoicing
+  // We add the distance to the divs and we have much rejoicing
   slider.scrollLeft = scrollLeft - walk;
 }
 
