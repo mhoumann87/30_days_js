@@ -33,7 +33,7 @@ Her er my solotions to the Projects
 * [x] Day 25 - Event Capture, Propagation, Bubbling and Once - made 2018-10-28
 * [x] Day 26 - Stripe Follow Along Dropdown - made 2018-10-29
 * [x] Day 27 - Click and Drag to Scroll - made 2018-10-30
-* [ ] Day 28 - Video Speed Controller UI - made
+* [x] Day 28 - Video Speed Controller UI - made 2018-10-31
 * [ ] Day 29 - Countdown Clock - made
 * [ ] Day 30 - Whack A Mole Game - made
 

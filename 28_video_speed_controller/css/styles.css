@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #E0EFFC;
-  --accent: #ffffff;
-  --rgba: rgba(255, 255, 255, .8);
-  --font: #282828;
-  --accent-font: #282828;
-  --link-hover: #A14000;
+  --background: #FFBDB0;
+  --accent: #B32331;
+  --rgba: rgba(255, 189, 176, .6);
+  --font: #3C1D30;
+  --accent-font: #FEDECC;
+  --link-hover: #8EA15E;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
