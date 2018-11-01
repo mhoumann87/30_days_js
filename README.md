@@ -34,7 +34,7 @@ Her er my solotions to the Projects
 * [x] Day 26 - Stripe Follow Along Dropdown - made 2018-10-29
 * [x] Day 27 - Click and Drag to Scroll - made 2018-10-30
 * [x] Day 28 - Video Speed Controller UI - made 2018-10-31
-* [ ] Day 29 - Countdown Clock - made
+* [x] Day 29 - Countdown Clock - made 2018-11-01
 * [ ] Day 30 - Whack A Mole Game - made
 
 ======================================================
