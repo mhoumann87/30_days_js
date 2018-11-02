@@ -41,17 +41,19 @@
 
           <div class="game-header">
             <h2>Wack-A-Mole</h2>
-            <p class="score">Score 10</p>
+            <p>Score <span class="score"></span></p>
           </div>
-
+          <div class="game-over">
+            <p>Game Over</p>
+          </div>
           <div class="controls">
             <div class="start-box">
-              <button class="mode start">Start Game</button>
+              <button class="start">Start Game</button>
             </div>
             <div class="diff">
               <p>Difficulty:</p>
               <button class="mode easy" data-diff=1>Easy</button>
-              <button class="mode normal" data-diff=2>Normal</button>
+              <button class=" mode normal active" data-diff=2>Normal</button>
               <button class="mode hard" data-diff=3>Hard</button>
             </div>
           </div>
@@ -86,11 +88,8 @@
 
           <div class="high-score">
             <h4>High Score</h4>
-            <ul class="hs-list">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
+            <ol class="hs-list">
+            </ol>
           </div>
 
         </div>
@@ -122,6 +121,7 @@
             Unsplash
           </a>
         </p>
+        <p>Game Design and grapichs <a href="https://wesbos.com/" target="_blank">Wes Bos</a></p>
         <p>
           Web design and development
           <span id="copy"></span>

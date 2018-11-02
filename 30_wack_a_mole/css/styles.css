@@ -228,9 +228,22 @@ main {
   margin: 0;
 }
 
+.game-over {
+  opacity: 1;
+}
+
 .game-header p {
   font-size: 2.5rem;
   margin: 0;
+}
+
+.game-over p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.game-over.no-show {
+  opacity: 0;
 }
 
 .controls {
@@ -268,6 +281,17 @@ button {
   border-radius: 10px;
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2);
 }
+
+button.mode {
+  border: 2px solid transparent;
+}
+
+button.mode.active {
+  border: 2px solid black;
+
+}
+
+
 
 .easy {
   background: green;
@@ -326,12 +350,11 @@ button {
   transition: all .4s;
 }
 
-.hole-up .mole {
+.hole.up .mole {
   top: 0;
 }
 
 .high-score {
-
   font-size: 1.4rem;
   display: none;
 }
